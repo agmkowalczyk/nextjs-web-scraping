@@ -26,6 +26,8 @@ export async function scrapeAmazonProduct(url: string) {
     const $ = cheerio.load(response.data)
 
     const title = $('#productTitle').text().trim()
+    const category = $('#nav-subnav').attr('data-category')
+
     const currentPrice = extractPrice(
       $('.priceToPay span.a-price-whole'),
       $('a.size.base.a-color-price'),
@@ -56,19 +58,23 @@ export async function scrapeAmazonProduct(url: string) {
     const data = {
       url,
       title,
-      currentPrice: Number(currentPrice),
-      originalPrice: Number(originalPrice),
+      currentPrice: Number(currentPrice) || Number(originalPrice),
+      originalPrice: Number(originalPrice) || Number(currentPrice),
       priceHistory: [],
       isOutOfStock: !inStock,
       image: imageUrls[0],
       currency: currency || 'zł',
       discountRate: Number(discountRate),
-      category: 'category',
+      category: category || 'category',
       reviewsCount: 100,
       starts: 4.5,
-      description
+      description,
+      lowestPrice: Number(currentPrice) || Number(originalPrice),
+      highestPrice: Number(originalPrice) || Number(currentPrice),
+      averagePrice: Number(currentPrice) || Number(originalPrice),
     }
-    console.log(data)
+
+    return data
   } catch (error: any) {
     throw new Error(`Failed to scrape product: ${error.message}`)
   }
