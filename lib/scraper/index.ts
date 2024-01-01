@@ -54,6 +54,10 @@ export async function scrapeAmazonProduct(url: string) {
     const currency = extractCurrency($('.priceToPay .a-price-symbol'))
     const discountRate = $('.savingsPercentage').text().replace(/[-%]/g, '')
     const description = extractDescription($)
+    const reviews = extractPrice(
+      $('#averageCustomerReviews_feature_div #acrCustomerReviewText')
+    )
+    const stars = $('.a-icon-star .a-icon-alt').text().trim().charAt(0)
 
     const data = {
       url,
@@ -66,8 +70,8 @@ export async function scrapeAmazonProduct(url: string) {
       currency: currency || 'zł',
       discountRate: Number(discountRate),
       category: category || 'category',
-      reviewsCount: 100,
-      starts: 4.5,
+      reviewsCount: Number(reviews) || 100,
+      stars: Number(stars) || 4.5,
       description,
       lowestPrice: Number(currentPrice) || Number(originalPrice),
       highestPrice: Number(originalPrice) || Number(currentPrice),

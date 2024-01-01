@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <header className='w-full'>
       <nav className='nav'>
-        <Link href='/home' className='flex items-center gap-1'>
+        <Link href='/' className='flex items-center gap-1'>
           <Image
             src='/assets/icons/logo.svg'
             width={27}
