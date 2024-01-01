@@ -3,8 +3,9 @@
 import { useState, Fragment, FormEvent } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
+import { addUserEmailtoProduct } from '@/lib/actions'
 
-const Modal = () => {
+const Modal = ({ productId }: { productId: string }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -17,7 +18,7 @@ const Modal = () => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    //
+    await addUserEmailtoProduct(productId, email)
 
     setIsSubmitting(false)
     setEmail('')
