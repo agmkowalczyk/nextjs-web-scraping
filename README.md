@@ -13,7 +13,7 @@ Web Scraping (Next, React, TypeScript, MongoDB, TailwindCSS, Bright Data, headle
 </p>
 
 ## Live Preview
-[Click here](https://https://nextjs-web-scraping-three.vercel.app/)
+[Click here](https://nextjs-web-scraping-three.vercel.app/)
 
 
 
