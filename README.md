@@ -1,3 +1,34 @@
+# NEXT.js Web Scraping
+
+## Description
+Web Scraping (Next, React, TypeScript, MongoDB, TailwindCSS, Bright Data, headless ui, cron)
+
+<p>
+<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="next.js">
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react">
+<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="typescript">
+<img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongoDB">
+<img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="tailwind">
+<img src="https://img.shields.io/badge/-headless ui-black?style=for-the-badge&logo=headlessui&logoColor=white" alt="headless ui">
+</p>
+
+## Live Preview
+[Click here](https://https://nextjs-web-scraping-three.vercel.app/)
+
+
+
+## Image
+
+![preview](https://github.com/agmkowalczyk/nextjs-web-scraping/blob/main/screenshots/nextjs-web-scraping-1.png "NEXT.js Web Scraping")
+
+![preview](https://github.com/agmkowalczyk/nextjs-web-scraping/blob/main/screenshots/nextjs-web-scraping-2.png "NEXT.js Web Scraping")
+
+<img src="https://github.com/agmkowalczyk/nextjs-web-scraping/blob/main/screenshots/nextjs-web-scraping-3.png" alt="preview" title="NEXT.js Web Scraping" style="width: 350px">
+
+\
+\
+\
+<br>
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
